@@ -28,7 +28,7 @@ public class HookLogin implements IXposedHookLoadPackage {
 //        Log.e(TAG, "Load app packageName:" + lpparam.packageName);
 //
 //        /**
-//         * 过滤非目标应用
+//         * 过滤非目标应用,本文目标应用即LoginDemo，包名为：cn.icheny.logindemo
 //         */
 //        if (!"cn.icheny.logindemo".equals(lpparam.packageName)) {
 //            return;
@@ -36,7 +36,7 @@ public class HookLogin implements IXposedHookLoadPackage {
 //
 //        //固定格式
 //        XposedHelpers.findAndHookMethod(
-//                "cn.icheny.logindemo.LoginActivity", // 需要hook的包名+类名
+//                "cn.icheny.logindemo.LoginActivity", // 需要hook的方法所在类的完整类名
 //                lpparam.classLoader,                            // 类加载器，固定这么写就行了
 //                "checkLogin",                     // 需要hook的方法名，checkLogin(username,password)
 //                String.class,                                   // 第一个参数，用户名
